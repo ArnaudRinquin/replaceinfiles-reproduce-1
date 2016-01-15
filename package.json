@@ -1,0 +1,28 @@
+{
+  "name": "replaceinfiles-reproduce-1",
+  "version": "0.0.0",
+  "description": "Reproduce replaceinfilesissue #1",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "pretest": "npm run build",
+    "test": "diff dist/index.html expected/index.html",
+    "build": "cat map.json | replaceinfiles -s static/index.html -d 'dist/{base}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArnaudRinquin/replaceinfiles-reproduce-1.git"
+  },
+  "keywords": [
+    "replaceinfiles"
+  ],
+  "author": "Arnaud Rinquin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArnaudRinquin/replaceinfiles-reproduce-1/issues"
+  },
+  "homepage": "https://github.com/ArnaudRinquin/replaceinfiles-reproduce-1#readme",
+  "devDependencies": {
+    "replaceinfiles": "^1.1.4"
+  }
+}
